@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
       imgAttributes: {
         decoding: "async",
         loading: "lazy",
-        width: "auto",
+        width: "200",
         height: "auto",
       },
       pictureAttributes: { class: "picture miguel" },
