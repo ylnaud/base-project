@@ -11,11 +11,12 @@
     {% endset %}
     <!-- feed it through our cssmin filter to minify -->
     <style>
-      {{css | cssmin | safe}}</style>
+      {{css | cssmin | safe }}</style>
   </head>
   <body>
     <header>{% include "nav.njk" %}</header>
-    <main class="container">{{ content | safe }}</main>
+    <!-- Contenido Principal -->
+    <main class="main-content">{{ content | safe }}</main>
     {% include "footer.njk" %}
     <script type="module" src="js/index.js"></script>
   </body>

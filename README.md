@@ -3,14 +3,14 @@ El usuario quiere un `README.md` que explique cómo usar su plantilla de Elevent
 Ya tiene la estructura con `includes/layouts/base.njk` y `includes/styles.css`, por lo que debo documentar cómo estos archivos son manejados en el proyecto.  
 Voy a generar el `README.md` con instrucciones claras y detalladas.
 
-```git clone https://github.com/ylnaud/base-project.git cd base-project
+git clone https://github.com/ylnaud/base-project.git cd base-project
 
 npm install
 
 npm start
 
 
-base-project/
+``` base-project/
 ├── code/ # Código fuente (entrada)
 │ ├── includes/ # Archivos reutilizables
 │ │ ├── layouts/ # Plantillas base
@@ -25,7 +25,5 @@ base-project/
 ├── .eleventy.js # Configuración de Eleventy
 ├── package.json # Dependencias y scripts
 └── README.md # Documentación (este archivo)
-
-
 
 ```

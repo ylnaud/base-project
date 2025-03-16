@@ -1,83 +1,137 @@
- body {
-   font-family: Arial, sans-serif;
-   font-size: 16px;
-   line-height: 1.6;
-   margin: 0;
-   padding: 0;
-   background-color: #f4f4f4;
-   color: #333;
- }
+/* Variables CSS para personalización */
+:root {
+  --color-primario: #3498db;
+  --color-secundario: #ffffff;
+  --color-fondo: #f4f4f4;
+  --color-texto: #333;
+  --color-hover: #2980b9;
+  --espaciado: 20px;
+  --tamano-fuente: 18px;
+  /* Variables para personalizar los tamaños de texto */
+  --tamano-h1: clamp(24px, 5vw, 48px);
+  --tamano-h2: clamp(20px, 4vw, 40px);
+  --tamano-h3: clamp(18px, 3.5vw, 32px);
+  --tamano-h4: clamp(16px, 3vw, 28px);
+  --tamano-h5: clamp(14px, 2.5vw, 24px);
+  --tamano-p: clamp(14px, 2vw, 18px);
+}
 
- header.header {
-   background: #333;
-   color: #fff;
-   padding: 1rem;
-   text-align: center;
- }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- .header h1 {
-   margin: 0;
- }
+/* Aplicación de tamaños a los títulos */
+h1 {
+  font-size: var(--tamano-h1);
+  font-weight: bold;
+}
 
- .header h1 a {
-   color: #fff;
-   text-decoration: none;
- }
+h2 {
+  font-size: var(--tamano-h2);
+  font-weight: bold;
+}
 
- .header p {
-   margin: 0.5rem 0;
- }
+h3 {
+  font-size: var(--tamano-h3);
+  font-weight: bold;
+}
 
- .nav ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
- }
+h4 {
+  font-size: var(--tamano-h4);
+  font-weight: bold;
+}
 
- .nav li {
-   margin: 0.5rem 0;
- }
+h5 {
+  font-size: var(--tamano-h5);
+  font-weight: bold;
+}
 
- .nav a {
-   color: #a86868;
-   text-decoration: none;
- }
+/* Tamaño responsivo para los párrafos */
+p {
+  font-size: var(--tamano-p);
+  line-height: 1.6;
+}
 
- @media (min-width: 600px) {
-   body {
-     font-size: 17px;
-   }
- }
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
 
- @media (min-width: 1024px) {
-   body {
-     font-size: 18px;
-   }
+/* HEADER */
+.header {
+  background: var(--color-primario);
+  color: var(--color-secundario);
+  padding: var(--espaciado);
+  text-align: center;
+}
 
-   .header {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     text-align: left;
-     padding: 1rem 2rem;
-   }
+.navbar {
+  margin-top: 10px;
+}
 
-   .header h1 {
-     flex: 1;
-   }
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--espaciado);
+}
 
-   .nav {
-     flex: 1;
-     display: flex;
-     justify-content: flex-end;
-   }
+.nav-links li {
+  display: inline;
+}
 
-   .nav ul {
-     display: flex;
-     gap: 1rem;
-   }
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-secundario);
+  font-size: var(--tamano-fuente);
+  padding: 10px;
+  transition: background 0.3s;
+}
 
-   .nav ul li {
-     margin: 0;
-   }
- }
+.nav-links a:hover {
+  background-color: var(--color-hover);
+  border-radius: 5px;
+}
+
+/* MAIN */
+.main-content {
+  padding: var(--espaciado);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.section {
+  background: var(--color-secundario);
+  padding: var(--espaciado);
+  margin: var(--espaciado) 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--color-primario);
+  color: var(--color-secundario);
+  text-align: center;
+  padding: var(--espaciado);
+  margin-top: var(--espaciado);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px;
+  }
+}
